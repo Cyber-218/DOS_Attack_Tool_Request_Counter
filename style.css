@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+#count {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#type {
+  font-size: 16px;
+}
+
+#ip {
+  font-size: 16px;
+}
+
+#time {
+  font-size: 16px;
+}
+
+#count-by-ip {
+  font-size: 16px;
+}
+
+#result {
+  font-size: 16px;
+}
