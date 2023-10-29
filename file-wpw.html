@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Site Visitor Counter</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      font-size: 32px;
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #777;
+    }
+ </style>
+</head>
+<body>
+ <h1>Welcome to our site!</h1>
+ <p>There are currently <span id="visitor-count">0</span> visitors on the site now.</p>
+
+ <script>
+    // The current count of visitors on the site
+    let visitorCount = 0;
+
+    // The maximum number of visitors that the site can handle at once
+    const maxVisitors = 1000;
+
+    // Increase the visitor count
+    function incrementVisitorCount() {
+      visitorCount++;
+
+      // Update the display with the new visitor count
+      document.getElementById('visitor-count').textContent = visitorCount;
+
+      // If the maximum number of visitors has been reached, display a warning message
+      if (visitorCount === maxVisitors) {
+        alert('Warning: The maximum number of visitors has been reached. The site may become unresponsive.');
+      }
+    }
+
+    // Add an event listener to the document to call the incrementVisitorCount function when a new visitor arrives
+    document.addEventListener('DOMContentLoaded', incrementVisitorCount);
+ </script>
+</body>
+</html>
